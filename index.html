@@ -35,6 +35,17 @@
 
     <p><a href="map.html">Map</a></p>
 
-    <input type="file" accept="image/*" capture="environment">
+    <video id="player" controls autoplay></video>
+    <script>
+      const player = document.getElementById("player");
+
+      const constraints = {
+        video: true
+      };
+
+      navigator.mediaDevices.getUserMedia(constraints).then(stream => {
+        player.srcObject = stream;
+      });
+    </script>
   </body>
 </html>
