@@ -34,11 +34,11 @@
     </script>
 
     <p><a href="map.html">Map</a></p>
-    <button onclick="vibrate(600)">Vibrate!</button>
+    <button onclick="vibrate()">Vibrate!</button>
 
     <script>
-        function vibrate(duration) {
-            navigator.vibrate(duration);
+        function vibrate() {
+            navigator.vibrate([200,30,200,30]);
         }
     </script>
   </body>
